@@ -1,0 +1,120 @@
+{% extends 'admin_base.html' %}
+
+{% block main %}
+
+
+<div class="'card shadow m-2">
+    <div class="card-body">
+    
+        <h5 class="p-2 text-danger" style="border-bottom : 2px solid orange" >Edit Employee Education Details</h5>
+
+        <div class="container-fluid">
+            
+            <table class="table table-bordered">
+                <tr>
+                    <th>Post Graduation Course Name</th>
+                    <td><input type='text' name="coursepg" class="form-control" value="{{education.coursepg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Post Graduation School/College</th>
+                    <td><input type='text' name="schoolclgpg" class="form-control" value="{{education.schoolclgpg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Year of Passing in PG</th>
+                    <td><input type='text' name="yearofpassing" class="form-control" value="{{education.yearofpassing}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Percent in PG</th>
+                    <td><input type='text' name="percentagepg" class="form-control" value="{{education.percentagepg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Graduation Course Name</th>
+                    <td><input type='text' name="coursegra" class="form-control" value="{{education.coursegra}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Graduation School/College</th>
+                    <td><input type='text' name="schoolclggra" class="form-control" value="{{education.schoolclggra}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Year of Passing in Graduation</th>
+                    <td><input type='text' name="yearofpassingra" class="form-control" value="{{education.yearofpassingra}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Percent in Graduation</th>
+                    <td><input type='text' name="percentagegra" class="form-control" value="{{education.percentagegra}}"></td>
+                </tr>
+
+                <tr>
+                    <th>SSC Course Nam</th>
+                    <td><input type='text' name="coursessc" class="form-control" value="{{education.coursessc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>SSC School/College</th>
+                    <td><input type='text' name="schoolclgssc" class="form-control" value="{{education.schoolclgssc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Year of Passing in SSC</th>
+                    <td><input type='text' name="yearofpassingssc" class="form-control" value="{{education.yearofpassingssc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Percent in SSC</th>
+                    <td><input type='text' name="percentagessc" class="form-control" value="{{education.percentagessc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>HSC Course Nam</th>
+                    <td><input type='text' name="coursehsc" class="form-control" value="{{education.coursehsc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>HSC School/College</th>
+                    <td><input type='text' name="schoolclghsc" class="form-control" value="{{education.schoolclghsc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Year of Passing in HSC</th>
+                    <td><input type='text' name="yearofpassinghsc" class="form-control" value="{{education.yearofpassinghsc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Percent in HSC</th>
+                    <td><input type='text' name="percentagehsc" class="form-control" value="{{education.percentagehsc}}"></td>
+                </tr>
+            </table>
+        
+         
+        </div>
+        
+    </div>
+
+</div>
+
+
+{% if error == "no" %}
+<script>
+    alert('Employee Education Detail has been updated');
+    window.location = ('{% url "edit_education" education.user.id %}');
+   
+</script>
+{% endif %}
+
+{% if error =="yes" %}
+<script>
+    alert('Something went wrong , Try Again...' );
+    
+</script>
+{% endif %}
+
+
+
+{% endblock %}

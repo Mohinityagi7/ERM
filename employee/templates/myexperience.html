@@ -1,0 +1,83 @@
+{% extends 'emp_base.html' %}
+
+{% block main %}
+
+
+<div class="'card shadow m-2">
+    <div class="card-body">
+        <a href="{% url 'edit_experience' %}" class="btn btn-primary float-right btn-sm">Edit My Work Experience</a>
+        <h5 class="p-2 text-danger" style="border-bottom : 2px solid orange" >My Work Experience</h5>
+
+        <div class="container-fluid">
+            
+            <table class="table table-bordered">
+                <tr>
+                    <th>First Company Name</th>
+                    <td>{{experience.company1name}}</td>
+                </tr>
+
+                <tr>
+                    <th>First Job Designation</th>
+                    <td>{{experience.company1desig}}</td>
+                </tr>
+
+                <tr>
+                    <th>First job Salary</th>
+                    <td>{{experience.company1salary}}</td>
+                </tr>
+
+                <tr>
+                    <th>First job Duration</th>
+                    <td>{{experience.company1duration}}</td>
+                </tr>
+
+                <tr>
+                    <th>Second Company Name</th>
+                    <td>{{experience.company2name}}</td>
+                </tr>
+
+                <tr>
+                    <th>Second Job Designation</th>
+                    <td>{{experience.company2desig}}</td>
+                </tr>
+
+                <tr>
+                    <th>Second job Salary</th>
+                    <td>{{experience.company2salary}}</td>
+                </tr>
+
+                <tr>
+                    <th>Second job Duration</th>
+                    <td>{{experience.company2duration}}</td>
+                </tr>
+
+                <tr>
+                    <th>Third Company Name</th>
+                    <td>{{experience.company3name}}</td>
+                </tr>
+
+                <tr>
+                    <th>Third  Job Designation</th>
+                    <td>{{experience.company3desig}}</td>
+                </tr>
+
+                <tr>
+                    <th>Third  job Salary</th>
+                    <td>{{experience.company3salary}}</td>
+                </tr>
+
+                <tr>
+                    <th>Third  job Duration</th>
+                    <td>{{experience.company3duration}}</td>
+                </tr>
+            </table>
+        
+         
+        </div>
+        
+    </div>
+
+</div>
+
+
+{% endblock %}

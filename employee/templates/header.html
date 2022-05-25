@@ -1,0 +1,39 @@
+{% load static %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Employee Record Management System</a>
+  
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link {% if request.path == '/' %} active {% endif %}" href="{% url 'index' %}"><i class="fa fa-home"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/registration/' %} active {% endif %}" href="{% url 'registration' %}"><i class="fas fa-sign-out-alt"></i>Employee Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/emp_login/' %} active {% endif %}" href="{% url 'emp_login' %}"><i class="fas fa-sign-in-alt"></i>Employee Login</a>
+          <li class="nav-item">
+            <a class="nav-link {% if request.path == '/admin_login/' %} active {% endif %}" href="{% url 'admin_login' %}"><i class="fas fa-sign-in-alt"></i>Admin Login</a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </nav>
